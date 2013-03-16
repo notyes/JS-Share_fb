@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>My Feed Dialog Page</title>
+  </head>
+  <body>
+
+    <?php  
+      $url = '"www.c2oh2o.com"';
+      $img = '"http://c2oh2o.com/wp-content/uploads/2013/03/Logo_C2OH2O.png"';
+      $title= '"PHP HTML JAVASCRIPT JQUERY TIPS.. ?"';
+      $caption= '"Tip ต่างๆ"';
+      $description= '"หาคุณกำลังมองหาอะไรบางอย่างอยู่ ลองเข้ามาดูเว็บนี้สิแล้วจะรู้"';
+
+    ?>
+    <div id='fb-root'></div>
+    <script src='http://connect.facebook.net/en_US/all.js'></script>
+    <script src='//c2oh2o.com/demo/share/share_fb.js'></script>
+    <p><a onclick='postToFeed(<?php echo $url ?>,<?php echo $img ?>,<?php echo $title ?>,<?php echo $caption ?>,<?php echo $description ?>); return false;'>Post to Feed</a></p>
+    <p id='msg'></p>
+
+  
+  </body>
+</html>
