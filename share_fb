@@ -1,0 +1,21 @@
+FB.init({appId: "160427290735938", status: true, cookie: true});
+
+function postToFeed(url,img,title,caption,description) {
+
+  // calling the API ...
+  var obj = {
+    method: 'feed',
+    //redirect_uri: 'http://www.c2oh2o.com/demo/share/index3.php',
+    link: url,
+    picture: img,
+    name: title,
+    caption: caption,
+    description: description
+  };
+
+  function callback(response) {
+    //document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+  }
+
+  FB.ui(obj, callback);
+}
